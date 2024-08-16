@@ -4,19 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="style.css">
-    <title></title>
+    <title>Fern and Fawn Lactation</title>
 </head>
 
 <body>
     <header>
-
+        <a href="#hero">
+            <img src="assets/logo.png" alt="Fern and Fawn Lactation Logo">
+        </a>
+        <a class="nav__contact-link" href="#contact">Get In Touch</a>
     </header>
     <main>
-        <section id="hero"></section>
-        <section id="about"></section>
-        <section id="contact"></section>
+        <section id="hero">
+            <img class="hero__image" src="/assets/hero-image.png"
+                alt="Two hands forming a heart around a crocheted breast.">
+            <div class="hero__text">
+                <h2>International Board-Certified Lactation Consultation</h2>
+                <p>Comprehensive lactation support locally in the West Kootenays, BC and virtually across Canada.</p>
+                <button class="button button-primary" onclick="window.location.href='#contact'">Book a
+                    Consultation</button>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about__text">
+                <h2>Expert guidance for your feeding journey</h2>
+                <p>I’m here to transform your feeding struggles into successes. Whether you’re facing nipple pain, milk
+                    supply issues, or feeling overwhelmed, let’s tackle it together. I’m dedicated to:</p>
+                <ul>
+                    <li>Simplifying your breastfeeding journey.</li>
+                    <li>Tailoring evidence-based strategies to your needs.</li>
+                    <li>Helping you feel confident in navigating challenges.</li>
+                </ul>
+                <button class="button button-secondary" onclick="window.location.href='#contact'">Let’s work
+                    together</button>
+            </div>
+            <div class="about__image">
+                <img src="/assets/about-image.png" alt="Photo of Michelle.">
+                <h3>Hi, I’m Michelle</h3>
+                <!-- <p>(she/her)</p> -->
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contact__text">
+                <div class="contact__heading">
+                    <div class="contact__title">
+                        <h2>Let's Talk</h2>
+                        <img src="/assets/rainbow.png" alt="A rainbow.">
+                    </div>
+                    <p>Inclusive support for all feeding journeys.</p>
+                </div>
+                <div class="contact__info">
+                    <p><strong>Stay Connected:</strong></p>
+                    <a href="mailto:michelle@fernandfawnlactation.ca">michelle@fernandfawnlactation.ca</a>
+                    <p>Located in Rossland, BC</p>
+                    <p><em>Serving the West Kootenays in person and Canada virtually.</em></p>
+                    <div class="contact__socials">
+                        <a href="https://www.facebook.com/fernandfawnlactation" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-facebook">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/fernandfawnlactation/" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-instagram">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <form action="" method="post">
+                <div class="contact__form-names">
+                    <div>
+                        <label for="fname">First Name*</label>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                    <div>
+                        <label for="lname">Last Name*</label>
+                        <input type="text" id="lname" name="lname" required>
+                    </div>
+                </div>
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required>
+                <label for="subject">Subject*</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" required></textarea>
+                <button class="button button-primary" type="submit">Submit</button>
+            </form>
+        </section>
     </main>
+    <div class="scroll-controls">
+        <buutton onclick="window.location.href='#hero'" class="scroll-controls__button"></buutton>
+        <buutton onclick="window.location.href='#about'" class="scroll-controls__button"></buutton>
+        <buutton onclick="window.location.href='#contact'" class="scroll-controls__button"></buutton>
+    </div>
 </body>
 <script src="script.js"></script>
 
