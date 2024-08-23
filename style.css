@@ -172,7 +172,7 @@ main::-webkit-scrollbar-thumb {
 }
 
 section {
-	height: 100vh;
+	min-height: 100vh;
 	scroll-snap-align: start;
 	padding: 8rem 4rem;
 	display: grid;
@@ -245,6 +245,20 @@ a.nav__contact-link {
 	font-family: var(--font-heading-italic);
 	color: var(--color-secondary-dark);
 	transition: 0.2s;
+}
+
+header > a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	letter-spacing: -1px;
+}
+
+h1.title {
+	font-size: 1.5rem;
+	font-family: var(--font-body);
+	font-weight: 400;
+	color: var(--color-secondary-darker);
 }
 
 @media (hover: hover) {
@@ -333,12 +347,26 @@ input[type="email"],
 textarea {
 	border: none;
 	background-color: var(--color-light);
-	margin-bottom: 1rem;
-	padding: 0.75rem;
+	margin-bottom: 0.5rem;
+	padding: 0.5rem;
 }
 
 textarea {
 	resize: none;
+	height: 10rem;
+	scrollbar-width: thin;
+}
+
+textarea::-webkit-scrollbar {
+	width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+	background: var(--color-light);
+}
+
+textarea::-webkit-scrollbar-thumb {
+	background-color: var(--color-primary);
 }
 
 form {
@@ -359,6 +387,7 @@ form {
 
 .contact__text {
 	height: 100%;
+	max-height: 70vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -402,7 +431,7 @@ form {
 	height: 2rem;
 }
 
-/* Scroll Controls */
+/* Scroll Controls ------------------------------------------------ */
 
 div.scroll-controls {
 	position: fixed;
@@ -426,5 +455,62 @@ div.scroll-controls {
 @media (hover: hover) {
 	.scroll-controls__button:hover {
 		background-color: var(--color-primary-dark);
+	}
+}
+
+/* Responsive Layout -----------------------------------------------------*/
+
+@media screen and (min-width: 1280px) {
+	header {
+		padding: 0.25rem 8rem;
+	}
+
+	section,
+	#hero,
+	#about,
+	#contact {
+		padding: 4rem 8rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	section,
+	#hero,
+	#about,
+	#contact {
+		padding: 2rem 1rem;
+		grid-template-columns: 1fr;
+	}
+
+	header {
+		padding: 0.25rem 1rem;
+		width: 100%;
+	}
+
+	h1.title {
+		font-size: 1.25rem;
+		max-width: 10rem;
+		line-height: 1;
+	}
+
+	main {
+		scroll-snap-type: unset;
+		padding: 4rem 0;
+	}
+
+	section {
+		height: fit-content;
+	}
+
+	div.scroll-controls {
+		display: none;
+	}
+
+	.contact__heading {
+		margin-bottom: 2rem;
+	}
+
+	.contact__form-names {
+		flex-direction: column;
 	}
 }
